@@ -26,24 +26,37 @@ text-align: center;
 </div>
 <script>
 const af=[...'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'];
+/*
 const ss='ЗАЛА БЫЛА ПУСТЫННА – ИЛИ ВРЕМЯ НЕ ОБЕДЕННОЕ, ИЛИ МЕСТО НЕ БОЙКОЕ. ПОДОШЕДШЕМУ ХОЗЯИНУ Я ЖЕСТАМИ ОБЪЯСНИЛ, ЧТО ХОЧУ КУРИЦУ И ВИНО. ВСЕ ЭТО БЫСТРО ПРИНЕСЛИ, И МЫ С КУЧЕРОМ РАЗДЕЛИЛИ ТРАПЕЗУ, А ПОСКОЛЬКУ ИЗ КУХНИ ВОСХИТИТЕЛЬНО ПАХЛО ПИРОГАМИ, ВЗЯЛ С СОБОЙ В ДОРОГУ ПАРОЧКУ ПИРОГОВ СО СЛАДКОЙ НАЧИНКОЙ И БУТЫЛЬ ВИНА. КУЧЕР ПОКОСИЛСЯ НА БУТЫЛКУ, СЕЛ НА ОБЛУЧОК, И МЫ СНОВА ТРОНУЛИСЬ.';
+*/
+const ss='ПРИВЕТ КАК ДЕЛА';
 'use strict'; try {throw new Error(`Привет, полет нормальный`);} 
 catch (e) {
 /*  insert code here*/
-//['А']
-const boola=af.map(x=>{
+//********************************************
+const booa=af.map(x=>{/// однобукыенные слова
 	let e=new RegExp('\\bR\\b');
 	let y=ss.replace(RegExp(x,'g'),'R').replace(/[А-Я]/g,'Q');
 	return ['.',x][+e.test(y)];
 });
-console.log(boola.join(''));
+console.log(booa.join(''));
 
-const boolb=af.map(x=>{
+const boob=af.map(x=>{/// удвойенные буквы
 	let e=new RegExp(x+x);
 	return ['.',x][+e.test(ss)];
 });
-console.log(boolb.join(''));
-
+console.log(boob.join(''));
+/*  */
+let stt=new Set();
+let ar=[];
+[...ss].forEach(x=>{
+	if((af.indexOf(x)>-1)&&!stt.has(x))ar.push(x); 
+	stt.add(x)
+});
+ar=ar.concat(af.filter(x=>!stt.has(x)));
+console.log(ar.join(''));
+console.log(af.join(''));
+/***************************************
 
 //let p=new RegExp('\\bЪ\\b');
 /*let p=new RegExp('И');

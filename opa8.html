@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="data:image/gif;base64,R0lGODlhEAAQAPcAAHOAm2hxg56ipsDHwODv5tTq8pWaopSOkJyMg6qQc72YWdWvOuLnh+z+/ur+3+HvTnSBnFtleYB/ga23uef///n//46TnpONjKSRiquQdr6XWtqpJuLwWe7//+3//uHvTXF+l11lgHJteaGosP///+z//4mRnpSQiaWUg66Tcr+bU9iwJ+TyVur//+3//+HzUXJ8lFlccXFreaSpsPD//5ecqpmTjaWUgrCUc7+aT9i2LvL/acK7PW14jwAAAExJS+n//7O7w7SwpMWxkdOxdOW+U/bUK87AAINbOlYkD0sjHHiEm2pthQUEFgAAAkQ+SWFJSkssMD0ZE10vEMWUL4RYGxkADxUAFiQEEykKFnWDmnh/knVzfR4eKgAACgAABQAADgAAFQAAEgYAExMAFhgBFiAHFh0EFXGAlnJ+lH1+i8LGwgwNHgAAFwAAEAAAEQAAEw4DGwUAEQsAERQAERQAExcCExsCFnB+k32HnWRhbzw5QwAAGAAADw8AExgAFBsEFhkCE2x2jA8PJAAAA2ZFJkUZEwYADBAAER4EFCYKGGJrgGZocO/4/+74/5yrumRkamtVVMCQTP3SU//vS8W7VH1FRkgNAT8bHXiClomQo4KEldXZ0tDp9KOiorKlpLabeMCfYtWyL+zxBJmDWnyHmXmDlGpsf6qvrvX///T//6rE0oqGiaWdn6mVfLiWYs+hNePVGu///+//0OX7doqVpnyGmG5xhbnCw6S8zIuJj56anrGRZMqcN93CEun/9OL7R+HlPpCcr3WEmmJtgb7Kz/z///3//5OovZCSn5qXnZ+MfqyJXMOUOs+oGPH//+nrMs+/SHuHmneFmnF9kLTCye3+/uD0+ZmqupOYpZWRl5yKfqeIYbqQR8qoRej33NXLWZd5OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFewAkACwAAAAAEAAQAAAI/wABQAABo8cSLWjwCFqUqVQtYdICRAgRwweTLWnyDPKhyZStYdMESBAhw0cTLmr0+PCx6dQtYtQGTBgx44ePLmv2+GDECRWuYtUIUCBB1IkPNisbkUhVwZi1AhVK0ADyxEsbPj4ckVBV4dg1AxZM1AgC5YubNj4edVqVCxm2AxdO2BASxcsbtJA8sdKVLBsCDChuDJECBo4YH5E+tdqlTFuCDClwEJkSJk4fQpJAuUKxbJsCDSpyFKEiRk6fQpNCveLFjNuCDSt0GKkyZk4fQ5REwerVrBsDDix2HLFCho6fQ5VGxfLlzFuDDi1IILlSps4fRJZIyPr17JsDDy5IJCDBYsYOoESXSMwCBg3cgw8veCjJcuZOIEWYSNEKFi1cQAA7">
+
+  <title>Буквы-8</title>
+  <style>
+/*
+
+
+*/  
+
+*:not(hr), *::after, *::before {box-sizing: border-box;margin:0;padding:0;border:0}ul {list-style-type: none}
+ *{b0ox-sizing: border-box;} 
+#i{padding: 33px 0;background: linear-gradient(grey, #ded); 
+text-align: center;p0osition:relative;
+}
+d0iv{background: yellow;border:1px solid blue;}
+
+.ira{position: absolute;cursor: move; color: white;font-family:sans-serif;
+	display: grid; place-items:center; user-select: none;
+	font-size:16px;width:25px; height: 20px;a0spect-ratio:1;
+    z-index: 9;}
+.iba{margin:0 2px;p0osition: absolute;cursor: move; color: white;font-family:sans-serif;
+	display: grid; place-items:center; user-select: none;
+	font-size:16px;width:25px; h0eight: 20px;a0spect-ratio:1;
+    z0-index: 9;}	
+.hljs-function {}	
+.hljs-keyword {color:#8959a8; font-weight:700;}
+.hljs-title {color:#4271ae; font-weight:700;}
+.hljs-params {color:#6e0620;}
+.hljs-built_in {color:#884301;}/*#f5871f*/
+.hljs-number {color:#081fc9;}
+.hljs-string {color:#718c00;}	
+.hljs-rem {color:#677c0d;}	
+
+.km{margin:2px;
+display: grid; place-items: center;
+d0isplay: inline-block;
+width:57px; /* !important*/
+h0eight:25px; 
+border:4px solid blue;
+position: fixed; bottom: 0px;
+background: white;
+font-family : monospace;
+font-size:24px;
+text-overflow: clip;
+o0verflow: hidden;/*афтер с бефо тоже режутся )*/
+color:black;
+letter-spacing:1px;
+z-index:6;
+p0adding: 12px 0;
+}
+
+
+.a:before{content:'';display:block;position: absolute;width:5px; height: 20px;top:-27px;left:22px;background: blue;
+}
+
+
+
+.b:after{content:'';display:block;position: absolute;width:35px; height: 5px;top:-12px;left:8px;background: blue;}
+legend{font-family : monospace;
+font-size:24px;
+text-align: center;color: blue;
+}
+
+
+#m1,#m2,#m3{margin: auto; color: white; text-align: left;
+border:5px solid white;
+font-family : monospace;
+width: fit-content;
+padding: 20px 4%;
+font-size:22px;
+letter-spacing: 8px;
+line-height: 37px;
+max-width:800px;
+}
+#m1{
+d0isplay: none;
+position:absolute; top:0; left:0;
+border:5px solid #ffffff00;
+c0olor:#ffffff80;
+color:#00000080;
+background: white;
+}
+#m2{
+position:absolute; top:0; left:0;
+background: transparent;
+padding-top:5px;
+d0isplay:none;
+color: purple;
+font-weight:700;
+}
+#m3{
+p0osition:absolute; t0op:0; l0eft:0;
+visibility:hidden;
+}
+
+article{margin: auto;position: relative;width:fit-content;b0ackground: red;}
+
+#ty{display:flex;justify-content: center; align-items: flex-start;
+flex-wrap: wrap;visibility: hidden;
+position: fixed; bottom: 0px;
+
+z-index:5;
+left:50%;transform: translatex(-50%);
+width:970px;
+}
+#tablo{position:fixed; top:0; right:0;
+padding:13px;
+background:white; font-size:24px; color: navy;
+border:3px solid blue;
+z-index:55;
+}
+#iq{width:100%;w0idth: 970px;height:375px;background: #0000003f;
+position: fixed; bottom: 0px;
+z-index:5;
+left:50%;transform: translatex(-50%);}
+  </style>  
+</head>
+<body text=pink bgcolor="#ded">
+<a href="file:///K:/!/projAll/html2/dig2.html">feb2023</a>
+<a href="file:///K:/!/projAll/html1/main.html">dec2023</a>
+<a href="file:///K:/!/projAll/css_%D0%BF%D1%81%D0%B5%D0%B2%D0%B4%D1%8B/index.html">два кота
+(с iframes)
+</a>
+<button onclick="
+ir.forEach((x,i)=>{
+	x.style.top=ib[i].offsetTop+'px';
+	x.style.left=ib[i].offsetLeft+'px';})
+">reset</button>
+<button onclick="
+cop.value=m2.innerText;
+cop.select();document.execCommand('copy');window.getSelection()?.removeAllRanges();
+">copy</button>
+<textarea id="cop" style="width: calc(100% - 6px);height:222px;background:#ded;position:absolute; left:-9999px;">для копирования</textarea>
+
+<div id="tablo">235</div>
+
+
+<div id=i><article style=""><div id="m3"></div><div id="m1"></div><div id="m2"></div></article>
+
+<div id="ty" style="height:375px;background: green;"></div>
+</div>
+<div id="iq" style="">
+<!--<div id="j0" class="ira" style="left:0px;background: purple">С</div>
+<div id="j1" class="ira" style="left:0px;background: blue">К</div>	
+<div id="j2" class="ira" style="left:0px;background: navy">А</div>
+<div id="j3" class="ira" style="left:0px;background: maroon">З</div>
+<div id="j4" class="ira" style="left:0px;background: maroon">Р</div>-->
+</div>
+<form id="fa" style="margin: auto;w0idth: fit-content;width:100%;
+height: 443px;
+display: flex; align-items: flex-start; flex-wrap: wrap; background: yellow;
+">
+	<!--fieldset class="km"><legend>Q</legend></fieldset>
+	<fieldset class="km"><legend>V</legend></fieldset>
+	<fieldset class="km"><legend>S</legend></fieldset>
+	<fieldset class="km"><legend>D</legend></fieldset>
+	<fieldset class="km"><legend>I</legend></fieldset-->
+</form>
+
+<p style="height:200px;visibility: hidden"></p>
+
+<script>
+/*
+overflow: visible;
+word-wrap: normal;
+word-break: break-all;
+*/
+var ir,ib;
+'use strict'; try {throw new Error(`Привет, полет нормальный`);} 
+catch (e) {
+/*  insert code here*/
+      //  А  Б  В  Г  Д  Е  Ё  Ж  З  И  Й  К  Л  М  Н  О  П  Р 
+const fq=[21,7 ,14,4 ,9 ,34,0 ,4 ,12,21,11,11,12,16,35,38,8 ,12,
+		//  С  Т  У  Ф  Х  Ц  Ч  Ш  Щ  Ъ  Ы  Ь  Э  Ю  Я  _
+			18,19,8 ,2 ,5 ,1 ,4 ,3 ,2 ,0 ,13,3 ,0 ,0 ,11,45];
+const ef='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+const af=[...'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'];
+const qf=[...'ОНЕАИТСМВЫЛЗРЙКЯДПУБХГЖЧЬШФЩЦЮЭЪЁ'];
+let f;
+let o;//={Q:'.',V:'.',S:'.',D:'.',I:'.'};
+//[...'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'](fq[fq.indexOf(x)]+
+fa.innerHTML=qf.map((x,i)=>// id="'+i+'" id="'+i+'"
+{return '<div class="ira" style="height:'+(fq[af.indexOf(x)]+21)+'px;left:'+(i*30+30)+'px;background: red">'+x+'</div>'}).join('');
+//`<div id="${i}" class="ira" style="left:${i*50+30}px;background: blue">${x}</div>`).join('');
+ty.innerHTML=qf.map((x,i)=>//
+{return '<div class="iba" style="height:'+(fq[af.indexOf(x)]+21)+'px;left:'+(i*30+30)+'px;background: navy">'+x+'</div>'}).join('');
+
+//const 
+ir=[...document.querySelectorAll('.ira')];// подвижные элементы
+ib=[...document.querySelectorAll('.iba')];// неподвижные элементы
+//alert(ir.length);
+ir.forEach((x,i)=>{x.style.left = (localStorage.getItem(`myXCat8${i}`)||30+i*30)+'px';});
+ir.forEach((x,i)=>{x.style.top = (localStorage.getItem(`myYCat8${i}`)||100)+'px';});
+ir.forEach((x,i)=>{
+	if (x.style.left.replace(/px/g,'')<0)x.style.left='100px';
+	if (x.style.top.replace(/px/g,'')<0)x.style.top='100px';
+});
+
+
+
+
+//Make the DIV element draggagle:
+/*dragElement(j0);
+dragElement(j1);//
+dragElement(j2);
+dragElement(j3);
+;*/
+af.forEach((x,i)=>{dragElement(ir[i])});
+function dragElement(jopa) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  //alert(jopa.id);
+  //if (document.getElementById(jopa.id)) {// + "header"
+    /* if present, the header is where you move the DIV from:*/
+    //document.getElementById(jopa.id).onmousedown = dragMouseDown;// + "header"
+  //} else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    jopa.onmousedown = dragMouseDown;
+  //}
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+	//alert('o');
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    jopa.style.top = (jopa.offsetTop - pos2) + "px";
+    jopa.style.left = (jopa.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+	[...ir].forEach((x,i)=>{localStorage.setItem(`myXCat8${i}`,x.offsetLeft)});
+	[...ir].forEach((x,i)=>{localStorage.setItem(`myYCat8${i}`,x.offsetTop)});
+	
+	/*o['Q']='.';
+	o['V']='.';
+	o['S']='.';
+	o['D']='.';
+	o['I']='.';*/
+	//o={Q:'.',V:'.',S:'.',D:'.',I:'.'};
+o=[...ts].reduce((a,x)=>{a[x]='.'; return a},{});
+	//alert(g.join(''));
+	[...ir].forEach((x,i)=>{
+	let v=x.offsetLeft;
+	let w=x.offsetTop; 
+	let b=x.innerText;
+//alert(d);
+
+    //const ts='QVSDI';
+	
+	/* в какую башню попал
+	for(let j=0; j<ts.length;j++){
+		f=w>ws[j].y1&&w<ws[j].y2;
+		if(f&&(v>ws[j].x1)&&(v<ws[j].x2)){o[ts[j]]=b}	
+	}
+	*/
+	
+	/*f=w>ws[0].y1&&w<ws[0].y2;
+	if(f&&(v>ws[0].x1)&&(v<ws[0].x2)){o['Q']=d}
+	f=w>ws[1].y1&&w<ws[1].y2;
+	if(f&&(v>ws[1].x1)&&(v<ws[1].x2)){o['V']=d}
+	f=w>ws[2].y1&&w<ws[2].y2;
+	if(f&&(v>ws[2].x1)&&(v<ws[2].x2)){o['S']=d}
+	f=w>ws[3].y1&&w<ws[3].y2;
+	if(f&&(v>ws[3].x1)&&(v<ws[3].x2)){o['D']=d}
+	f=w>ws[4].y1&&w<ws[4].y2;
+	if(f&&(v>ws[4].x1)&&(v<ws[4].x2)){o['I']=d}	*/
+	}
+	
+	);
+	
+	//console.log(o);
+	//m2.innerHTML=[...s1].map(x=>o[x]).join('');
+	m2.innerHTML=[...s1].map(x=>(x in o)?o[x]:x).join('');//...
+	m3.innerHTML=m2.innerHTML;
+	tablo.innerText='hello '+jopa.style.left+' '+jopa.style.top;
+	//alert('[');
+	//console.log(v,'  ',w);
+	//alert
+	//([...s].map(x=>{alert(o[x]);o[x]}).join(''));
+  }
+}
+/*
+ТЕЛЕПАТИЯ ВПОЛНЕ МАТЕРИАЛИСТИЧНА. К СОЖАЛЕНИЮ, ЭТО ЯВЛЕНИЕ ОЧЕНЬ ПЛОХО ИЗУЧЕНО. ВО-ПЕРВЫХ, ЕГО СКОМПРОМЕТИРОВАЛИ ШАРЛАТАНЫ, КОТОРЫХ ВСЕГДА БЫЛО НЕСРАВНЕННО БОЛЬШЕ, ЧЕМ ИСТИННЫХ ТЕЛЕПАТОВ. КОНЕЧНО, БЫЛИ УЧЕНЫЕ, КОТОРЫЕ ПЫТАЛИСЬ ПОНЯТЬ СУЩНОСТЬ ТЕЛЕПАТИИ, ИЗУЧИТЬ ЭТО ЯВЛЕНИЕ. НО, СТОЛКНУВШИСЬ И РАЗ, И ДРУГОЙ С ШАРЛАТАНАМИ, ОНИ ПРИХОДИЛИ К ВЫВОДУ, ЧТО И ВСЯ ТЕЛЕПАТИЯ СПЛОШНОЕ ШАРЛАТАНСТВО
+*/
+/*
+ ГОРДОСТЬ ЛЮДЕЙ НИЗКИХ СОСТОИТ В ТОМ, ЧТОБЫ ПОСТОЯННО ГОВОРИТЬ О САМОМ СЕБЕ, ЛЮДЕЙ ЖЕ ВЫСШИХ — ЧТОБЫ ВОВСЕ О СЕБЕ НЕ ГОВОРИТЬ. ИСТОРИЯ — ЭТО НЕ ЧТО ИНОЕ, КАК КАРТИНА ПРЕСТУПЛЕНИЙ И НЕСЧАСТИЙ.
+ 
+ ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
+*/
+//const ss='ГОРДОСТЬ ЛЮДЕЙ НИЗКИХ СОСТОИТ В ТОМ, ЧТОБЫ ПОСТОЯННО ГОВОРИТЬ О САМОМ СЕБЕ, ЛЮДЕЙ ЖЕ ВЫСШИХ — ЧТОБЫ ВОВСЕ О СЕБЕ НЕ ГОВОРИТЬ. ИСТОРИЯ — ЭТО НЕ ЧТО ИНОЕ, КАК КАРТИНА ПРЕСТУПЛЕНИЙ И НЕСЧАСТИЙ.';
+/*
+const ss='ТЕЛЕПАТИЯ ВПОЛНЕ МАТЕРИАЛИСТИЧНА. К СОЖАЛЕНИЮ, ЭТО ЯВЛЕНИЕ ОЧЕНЬ ПЛОХО ИЗУЧЕНО. ВО-ПЕРВЫХ, ЕГО СКОМПРОМЕТИРОВАЛИ ШАРЛАТАНЫ, КОТОРЫХ ВСЕГДА БЫЛО НЕСРАВНЕННО БОЛЬШЕ, ЧЕМ ИСТИННЫХ ТЕЛЕПАТОВ. КОНЕЧНО, БЫЛИ УЧЕНЫЕ, КОТОРЫЕ ПЫТАЛИСЬ ПОНЯТЬ СУЩНОСТЬ ТЕЛЕПАТИИ, ИЗУЧИТЬ ЭТО ЯВЛЕНИЕ. НО, СТОЛКНУВШИСЬ И РАЗ, И ДРУГОЙ С ШАРЛАТАНАМИ, ОНИ ПРИХОДИЛИ К ВЫВОДУ, ЧТО И ВСЯ ТЕЛЕПАТИЯ СПЛОШНОЕ ШАРЛАТАНСТВО';*/
+/*const ss='ЗАЛА БЫЛА ПУСТЫННА – ИЛИ ВРЕМЯ НЕ ОБЕДЕННОЕ, ИЛИ МЕСТО НЕ БОЙКОЕ. ПОДОШЕДШЕМУ ХОЗЯИНУ Я ЖЕСТАМИ ОБЪЯСНИЛ, ЧТО ХОЧУ КУРИЦУ И ВИНО. ВСЕ ЭТО БЫСТРО ПРИНЕСЛИ, И МЫ С КУЧЕРОМ РАЗДЕЛИЛИ ТРАПЕЗУ, А ПОСКОЛЬКУ ИЗ КУХНИ ВОСХИТИТЕЛЬНО ПАХЛО ПИРОГАМИ, ВЗЯЛ С СОБОЙ В ДОРОГУ ПАРОЧКУ ПИРОГОВ СО СЛАДКОЙ НАЧИНКОЙ И БУТЫЛЬ ВИНА. КУЧЕР ПОКОСИЛСЯ НА БУТЫЛКУ, СЕЛ НА ОБЛУЧОК, И МЫ СНОВА ТРОНУЛИСЬ.';
+*/
+const ss='БЦУЛЬУЦНЬ ЕТЙОЕЕ; ЙОЭ ЯТЙЛЬЙ ЪЦТОЙ УЙЛЯЕЬЭОЭ. ЙОЭ НШН ОН АОЭНЬ,  БЬЙ У ЯЙТЗЪЙБОЙФ ЙСШНЛЬУН Е У ЯЙТЗЪЙБОЙМ КОЕЩН ЗУОЭЗ СТЭОД ОН ФЙЖНЬ ЕФНЬД ФНЛЬЭ; БЬЙ ЛЙУТНФНООЭЗ ЙСТЭАЙУЭООЙЛЬД ЕАЙСТНИЭ ЙТЦЪЕН СЙИНН ЙЛЬТЙН, ЯЙБЬЕ ОНУЕЪЕФЙН Е ЬНФ ОН ФНОНН ЛФНТЬНИДОЙН, КЙЬЙТЙН, ЯЙЪ ЙЪНЖЪЙЧ ИНЛЬЕ, ОЭОЙЛЕЬ ОНЙЬТЭАЕФРМ Е УНТОРМ ЦЪЭТ. ОЭЮЭ ЯЦСИЕКЭ ЯЙВЙЖЭ ОЭ ЯТЙУЕОХЕЭИЭ, КЙЬЙТРМ, ЯЙЪЛИЦЮЭУ ТЭАЩЙУЙТ ЪУЦВ ЪЕЯИЙФЭЬЙУ, ЯТЕОЭЪИНЖЭШЕВ К УТЭЖЪНСОРФ ЪУЙТЭФ, ЙЛЬЭИЛЗ СР';
+
+
+let dd;//=new Set(ss);
+dd=new Set([...ss].filter(x=>af.indexOf(x)>-1));
+const d=Array.from(dd).join('');//горд
+//alert(d);
+const q=[...ss].filter(x=>af.indexOf(x)>-1)// частота
+	.reduce((a,x)=>{a[x]=~~a[x]+1;return a},{})
+//console.log(q);//
+//console.log(af.sort((a,b)=>q.a-q.b));
+const c=[...af].filter(i=>i in q).sort((a,b)=>q[b]-q[a]).map(i=>q[i]-1);//21,14,13
+//console.log(c.join(','));
+const qa=[...af].filter(i=>i in q).sort((a,b)=>q[b]-q[a]).join('');//отеиc
+//console.log(qa);
+
+//const q3=fq.map(x=>x);			
+
+//const s1=[...ss].map(x=>(d.indexOf(x)>-1)?ef[d.indexOf(x)]:x).join('');
+const s1=[...ss].map(x=>(qa.indexOf(x)>-1)?ef[qa.indexOf(x)]:x).join('');
+//console.log(s1);//
+//********************************************
+//alert(s1);
+const booa=[...ef].map(x=>{/// однобукыенные слова
+	//let e=new RegExp('\\bR\\b');
+	//let y=s1.replace(RegExp(x,'g'),'R').replace(/[А-Я]/g,'Q');
+	//return ['.',x][+e.test(y)];
+	let e=new RegExp('\\b'+x+'\\b','g');
+	return e.test(s1);
+});
+//console.log(booa.join(''));
+
+const boob=[...ef].map(x=>{/// удвойенные буквы
+	let e=new RegExp(x+x);
+	//return ['.',x][+e.test(ss)];
+	return e.test(s1);
+});
+//console.log(boob.join(''));
+
+let stt=new Set();// ТИПА ключ шифрования замены
+let ar=[];
+[...ss].forEach(x=>{
+	if((af.indexOf(x)>-1)&&!stt.has(x))ar.push(x); 
+	stt.add(x)
+});
+ar=ar.concat(af.filter(x=>!stt.has(x)));
+//console.log(ar.join(''));
+//console.log(af.join(''));
+
+//***************************************
+	let ts=[];// abcd
+	for (let i=0; i<d.length; i++){ts.push(ef[i])}
+	ts=ts.join('');
+	
+let iq4=[...ts].map((x,i)=>//аддитивное обьединение двух колод - небоскребы и буквы
+'<fieldset class="km'+
+`${(booa[i])?' a':''}`+ //вертикальный штрих
+`${(boob[i])?' b':''}`+ // горизонтальн штрих
+'" style="left:'+(i*54)+'px">'+x+'</fieldset>').join('');	
+//fa.innerHTML+=iq4;
+
+//<legend>'+x+'</legend>
+const hu=document.querySelectorAll('.km');
+//const s='QVQVSVD';
+const s='SVQQIVD';
+o=[...ts].reduce((a,x)=>{a[x]='.'; return a},{});
+//m1.innerHTML=[...s].map(x=>x).join('');
+m1.innerHTML=[...s1].map(x=>x).join('');//DAS
+m2.innerHTML=[...s1].map(x=>(x in o)?o[x]:x).join('');
+m3.innerHTML=m2.innerHTML;
+
+
+let ws;// коорды размеры башен
+//hu[0].style.height='122px';
+//hu[0].style.height=(c[i]*(400/c[0]))|0+'px';
+//const hi=c.map(x=>`${(c[i]*(200/c[0]))|0}px`).join('_');
+const hi=c.map((x,i)=>`${43+c[i]*400/c[0]|0}px`);//.join('_');
+//console.log(hi);
+[...hu].forEach((x,i)=>{x.style.height=hi[i]});
+//[...hu].forEach((x,i)=>{x.offsetHeight=(c[i]*(200/c[0]))|0;});
+
+const sit=()=>{
+	ws=[...hu].map(x=>{return {// коорды посадочных мест
+		x1:x.offsetLeft,
+		x2:x.offsetLeft+x.offsetWidth,
+		y1:x.offsetTop,
+		y2:x.offsetTop+x.offsetHeight
+	}});
+	console.table(ws[0]);
+}
+
+sit();// пересчет коорд посадок
+//console.table(ws);
+//console.log(o);
+window.onresize=()=>{sit()}
+
+throw new Error('Хуле, страница отресована-можно ипать гусей');}
+</script>   
+</body>
+</html>
