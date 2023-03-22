@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="data:image/gif;base64,R0lGODlhEAAQAPcAAHOAm2hxg56ipsDHwODv5tTq8pWaopSOkJyMg6qQc72YWdWvOuLnh+z+/ur+3+HvTnSBnFtleYB/ga23uef///n//46TnpONjKSRiquQdr6XWtqpJuLwWe7//+3//uHvTXF+l11lgHJteaGosP///+z//4mRnpSQiaWUg66Tcr+bU9iwJ+TyVur//+3//+HzUXJ8lFlccXFreaSpsPD//5ecqpmTjaWUgrCUc7+aT9i2LvL/acK7PW14jwAAAExJS+n//7O7w7SwpMWxkdOxdOW+U/bUK87AAINbOlYkD0sjHHiEm2pthQUEFgAAAkQ+SWFJSkssMD0ZE10vEMWUL4RYGxkADxUAFiQEEykKFnWDmnh/knVzfR4eKgAACgAABQAADgAAFQAAEgYAExMAFhgBFiAHFh0EFXGAlnJ+lH1+i8LGwgwNHgAAFwAAEAAAEQAAEw4DGwUAEQsAERQAERQAExcCExsCFnB+k32HnWRhbzw5QwAAGAAADw8AExgAFBsEFhkCE2x2jA8PJAAAA2ZFJkUZEwYADBAAER4EFCYKGGJrgGZocO/4/+74/5yrumRkamtVVMCQTP3SU//vS8W7VH1FRkgNAT8bHXiClomQo4KEldXZ0tDp9KOiorKlpLabeMCfYtWyL+zxBJmDWnyHmXmDlGpsf6qvrvX///T//6rE0oqGiaWdn6mVfLiWYs+hNePVGu///+//0OX7doqVpnyGmG5xhbnCw6S8zIuJj56anrGRZMqcN93CEun/9OL7R+HlPpCcr3WEmmJtgb7Kz/z///3//5OovZCSn5qXnZ+MfqyJXMOUOs+oGPH//+nrMs+/SHuHmneFmnF9kLTCye3+/uD0+ZmqupOYpZWRl5yKfqeIYbqQR8qoRej33NXLWZd5OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFewAkACwAAAAAEAAQAAAI/wABQAABo8cSLWjwCFqUqVQtYdICRAgRwweTLWnyDPKhyZStYdMESBAhw0cTLmr0+PCx6dQtYtQGTBgx44ePLmv2+GDECRWuYtUIUCBB1IkPNisbkUhVwZi1AhVK0ADyxEsbPj4ckVBV4dg1AxZM1AgC5YubNj4edVqVCxm2AxdO2BASxcsbtJA8sdKVLBsCDChuDJECBo4YH5E+tdqlTFuCDClwEJkSJk4fQpJAuUKxbJsCDSpyFKEiRk6fQpNCveLFjNuCDSt0GKkyZk4fQ5REwerVrBsDDix2HLFCho6fQ5VGxfLlzFuDDi1IILlSps4fRJZIyPr17JsDDy5IJCDBYsYOoESXSMwCBg3cgw8veCjJcuZOIEWYSNEKFi1cQAA7">
+
+  <title>Замена-10</title>
+  <style>
+*:not(hr), *::after, *::before {box-sizing: border-box;margin:0;padding:0;border:0}ul {list-style-type: none}
+ 
+body{font-family:sans-serif;background-color:#ded} 
+#i{padding: 33px 0;background: linear-gradient(grey, #ded); 
+text-align: center;
+}
+
+
+.ira{position: absolute;cursor: move; color: white;
+	display: grid; place-items:center; user-select: none;
+	font-size:16px;width:25px; height: 20px;
+    z-index: 9;}
+.iba{margin:0 2px;cursor: move; color: white;
+	display: grid; place-items:center; user-select: none;
+	font-size:16px;
+	width:25px;
+    }	
+
+
+.km{margin:2px;
+	display: grid; place-items: center;
+	width:43px;  
+	border:4px solid blue;
+	position: fixed; bottom: 0px;
+	background: white;
+	font-family : monospace;
+	font-size:24px;
+	text-overflow: clip;
+	color:black;
+	letter-spacing:1px;
+	z-index:6;
+	}
+
+
+.a:before{content:'';display:block;position: absolute;width:5px; height: 20px;top:-27px;left:15px;background: blue;
+}
+
+
+
+.b:after{content:'';display:block;position: absolute;width:35px; height: 5px;top:-12px;left:2px;background: blue;}
+legend{font-family : monospace;
+font-size:24px;
+text-align: center;color: blue;
+}
+
+
+#m1,#m2,#m3{margin: auto; color: white; text-align: left;
+border:5px solid white;
+font-family : monospace;
+width: fit-content;
+padding: 20px 4%;
+font-size:22px;
+letter-spacing: 8px;
+line-height: 37px;
+max-width:800px;
+}
+#m1{
+position:absolute; top:0; left:0;
+border:5px solid #ffffff00;
+color:#00000080;
+background: white;
+}
+#m2{
+position:absolute; top:0; left:0;
+background: transparent;
+padding-top:5px;
+color: purple;
+font-weight:700;
+}
+#m3{
+visibility:hidden;
+}
+
+article{margin: auto;position: relative;width:fit-content;}
+
+#ty{padding-top:100px;
+display:flex;justify-content: center; align-items: flex-start;
+flex-wrap: wrap; visibility: hidden;
+position: fixed; bottom: 10px;
+width:100%;height:444px;background: fuchsia;
+z-index:5;
+}
+#fa{width:100%;height: 444px; background: transparent;
+ position: fixed; bottom:0;
+display: flex; align-items: flex-start; flex-wrap: wrap;
+z-index:6;
+}
+
+button{margin:1px;padding:8px 16px; background: #efd;
+border:2px solid blue; border-radius: 5px;
+font-size:21px;
+cursor:pointer;
+transition: all 1s
+}
+button:hover{background: #fff;}
+p{height:444px; visibility: hidden}
+nav{position:fixed;top:20px;left:0;
+display:flex; flex-direction:column;}
+#cop{width: calc(100% - 6px);height:222px;background:#ded;position:absolute; left:-9999px;}
+
+  </style>  
+</head>
+<body>
+	<nav>
+		<button onclick="
+			ir.forEach((x,i)=>{
+				x.style.top=ib[i].offsetTop+'px';
+				x.style.left=ib[i].offsetLeft+'px';});	
+			conny();// вывод деши
+		">reset</button>
+		<button onclick="
+			cop.value=m2.innerText;
+			cop.select();
+			document.execCommand('copy');
+			window.getSelection()?.removeAllRanges();
+		">copy</button>
+	</nav>
+	<textarea id="cop">для копирования</textarea>
+
+	<div id=i>
+		<article>
+			<div id="m3"></div>
+			<div id="m1"></div>
+			<div id="m2"></div>
+		</article>
+		<div id="ty"></div>
+	</div>
+	<form id="fa"></form>
+	<p></p>	
+
+<script>
+'use strict';
+var ir,ib;
+      //  А  Б  В  Г  Д  Е  Ё  Ж  З  И  Й  К  Л  М  Н  О  П  Р 
+const fq=[21,7 ,14,4 ,9 ,34,0 ,4 ,12,21,11,11,12,16,35,38,8 ,12,
+		//  С  Т  У  Ф  Х  Ц  Ч  Ш  Щ  Ъ  Ы  Ь  Э  Ю  Я  _
+			18,19,8 ,2 ,5 ,1 ,4 ,3 ,2 ,0 ,13,3 ,0 ,0 ,11,45];
+const ef='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+const af=[...'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'];
+const qf=[...'ОНЕАИТСМВЫЛЗРЙКЯДПУБХГЖЧЬШФЩЦЮЭЪЁ'];
+let f;
+let o; // обьект
+
+fa.innerHTML=qf.map((x,i)=>
+	{return '<div class="ira" style="height:'+
+	(fq[af.indexOf(x)]+21)+
+	'px;background: red">'+x+'</div>'}).join('');
+
+ty.innerHTML=qf.map((x,i)=>
+	{return '<div class="iba" style="height:'+
+	(fq[af.indexOf(x)]+21)+
+	'px;background: navy">'+x+'</div>'}).join('');
+
+
+
+function dragElement(ass) {//Make the DIV element draggagle:
+	var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+	ass.onmousedown = dragMouseDown;
+
+	function dragMouseDown(e) {
+		e = e || window.event;
+		// get the mouse cursor position at startup:
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		document.onmouseup = closeDragElement;
+		// call a function whenever the cursor moves:
+		document.onmousemove = elementDrag;
+		}
+
+	function elementDrag(e) {
+		e = e || window.event;
+		// calculate the new cursor position:
+		pos1 = pos3 - e.clientX;
+		pos2 = pos4 - e.clientY;
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		// set the element's new position:
+		ass.style.top = (ass.offsetTop - pos2) + "px";
+		ass.style.left = (ass.offsetLeft - pos1) + "px";
+		}
+
+	function closeDragElement() {
+		/* stop moving when mouse button is released:*/
+		document.onmouseup = null;
+		document.onmousemove = null;
+		[...ir].forEach((x,i)=>{localStorage.setItem(`myXCat10${i}`,x.offsetLeft)});
+		[...ir].forEach((x,i)=>{localStorage.setItem(`myYCat10${i}`,x.offsetTop)});
+		conny();// вывод деши
+		}
+}
+
+const ss='ЯРТРАНЯЗГ ЮАЬТВР ОНЯРЫЗНТЗЖЯЗЛВН. Е ЖЬПНТРВЗИ, ДЯЬ ГЮТРВЗР ЬЛРВК АТЬБЬ ЗЙФЛРВЬ. ЮЬ-АРЫЮХБ, РЧЬ ЖЕЬОАЫЬОРЯЗЫЬЮНТЗ УНЫТНЯНВХ, ЕЬЯЬЫХБ ЮЖРЧСН МХТЬ ВРЖЫНЮВРВВЬ МЬТКУР, ЛРО ЗЖЯЗВВХБ ЯРТРАНЯЬЮ. ЕЬВРЛВЬ, МХТЗ ФЛРВХР, ЕЬЯЬЫХР АХЯНТЗЖК АЬВГЯК ЖФЦВЬЖЯК ЯРТРАНЯЗЗ, ЗЙФЛЗЯК ДЯЬ ГЮТРВЗР. ВЬ, ЖЯЬТЕВФЮУЗЖК З ЫНЙ, З СЫФЧЬШ Ж УНЫТНЯНВНОЗ, ЬВЗ АЫЗБЬСЗТЗ Е ЮХЮЬСФ, ЛЯЬ З ЮЖГ ЯРТРАНЯЗГ ЖАТЬУВЬР УНЫТНЯНВЖЯЮЬ ЙНТН МХТН АФЖЯХВВН – ЗТЗ ЮЫРОГ ВР ЬМРСРВВЬР, ЗТЗ ОРЖЯЬ ВР МЬШЕЬР. АЬСЬУРСУРОФ БЬЙГЗВФ Г ПРЖЯНОЗ ЬМЭГЖВЗТ, ЛЯЬ БЬЛФ ЕФЫЗЩФ З ЮЗВЬ. ЮЖР ДЯЬ МХЖЯЫЬ АЫЗВРЖТЗ, З ОХ Ж ЕФЛРЫЬО ЫНЙСРТЗТЗ ЯЫНАРЙФ, Н АЬЖЕЬТКЕФ ЗЙ ЕФБВЗ ЮЬЖБЗЯЗЯРТКВЬ АНБТЬ АЗЫЬЧНОЗ, ЮЙГТ Ж ЖЬМЬШ Ю СЬЫЬЧФ АНЫЬЛЕФ АЗЫЬЧЬЮ ЖЬ ЖТНСЕЬШ ВНЛЗВЕЬШ З МФЯХТК ЮЗВН. ЕФЛРЫ АЬЕЬЖЗТЖГ ВН МФЯХТЕФ, ЖРТ ВН ЬМТФЛЬЕ, З ОХ ЖВЬЮН ЯЫЬВФТЗЖК.';
+
+let dd;//
+dd=new Set([...ss].filter(x=>af.indexOf(x)>-1));
+const d=Array.from(dd).join('');//горд
+const q=[...ss].filter(x=>af.indexOf(x)>-1)// частота
+	.reduce((a,x)=>{a[x]=~~a[x]+1;return a},{})
+const c=[...af].filter(i=>i in q).sort((a,b)=>q[b]-q[a]).map(i=>q[i]-1);//21,14,13
+const qa=[...af].filter(i=>i in q).sort((a,b)=>q[b]-q[a]).join('');//отеиc
+const s1=[...ss].map(x=>(qa.indexOf(x)>-1)?ef[qa.indexOf(x)]:x).join('');
+
+//********************************************
+
+const booa=[...ef].map(x=>{/// однобукыенные слова
+	let e=new RegExp('\\b'+x+'\\b','g');
+	return e.test(s1);
+});
+
+const boob=[...ef].map(x=>{/// удвойенные буквы
+	let e=new RegExp(x+x);
+	return e.test(s1);
+});
+
+let sot=new Set();// ТИПА ключ шифрования замены
+let key=[];
+[...ss].forEach(x=>{
+	if((af.indexOf(x)>-1)&&!sot.has(x))key.push(x); 
+	sot.add(x)
+});
+key=key.concat(af.filter(x=>!sot.has(x)));
+
+
+//***************************************
+let ts=[];// abcd
+for (let i=0; i<d.length; i++){ts.push(ef[i])}
+ts=ts.join('');
+	
+let iq4=[...ts].map((x,i)=>//аддитивное обьединение двух колод - небоскребы и буквы
+'<fieldset class="km'+
+`${(booa[i])?' a':''}`+ //вертикальный штрих
+`${(boob[i])?' b':''}`+ // горизонтальн штрих
+	'" style="left:'+(i*46)+'px">'+x+'</fieldset>').join('');	
+fa.innerHTML+=iq4;
+ir=[...document.querySelectorAll('.ira')];// подвижные элементы
+ib=[...document.querySelectorAll('.iba')];// неподвижные элементы         
+ir.forEach((x,i)=>{x.style.left = (localStorage.getItem(`myXCat10${i}`)||ib[i].offsetLeft)+'px';});
+ir.forEach((x,i)=>{x.style.top = (localStorage.getItem(`myYCat10${i}`)||1)+'px';});
+af.forEach((x,i)=>{dragElement(ir[i])});
+//*****************************
+
+const hu=document.querySelectorAll('.km');
+let ws;// коорды размеры башен
+
+const hi=c.map((x,i)=>`${43+c[i]*400/c[0]|0}px`);
+[...hu].forEach((x,i)=>{x.style.height=hi[i]});// высота букв
+const sit=()=>{
+	ws=[...hu].map(x=>{return {// коорды посадочных мест
+		x1:x.offsetLeft,
+		x2:x.offsetLeft+x.offsetWidth,
+		y1:x.offsetTop,
+		y2:x.offsetTop+x.offsetHeight
+	}});
+}
+
+sit();// пересчет коорд посадок
+conny();// вывод деши
+
+window.onresize=()=>{sit()}
+//*******************
+
+function conny(){// вывод деши
+	o=[...ts].reduce((a,x)=>{a[x]='.'; return a},{});
+	[...ir].forEach((x,i)=>{
+		let v=x.offsetLeft+ 12;
+		let w=x.getBoundingClientRect().top+20;
+		let b=x.innerText;
+		for(let j=0; j<ts.length;j++){//в какую башню попал
+			f=w>ws[j].y1&&w<ws[j].y2;
+			if(f&&(v>ws[j].x1)&&(v<ws[j].x2)){o[ts[j]]=b}	
+		}
+	});
+	m1.innerHTML=[...s1].map(x=>x).join('');//DAS
+	m2.innerHTML=[...s1].map(x=>(x in o)?o[x]:x).join('');
+	m3.innerHTML=m2.innerHTML;
+}
+</script>   
+</body>
+</html>
