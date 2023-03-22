@@ -8,29 +8,63 @@
 
   <title>Замена-10</title>
   <style>
-/*https://autoprefixer.github.io/ru/
-* Prefixed by https://autoprefixer.github.io
+/*
+* Prefixed by https://autoprefixer.github.io/ru/
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
 
-*:not(hr), *::after, *::before {-webkit-box-sizing: border-box;box-sizing: border-box;margin:0;padding:0;border:0}ul {list-style-type: none}
+*:not(hr), *::after, *::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+	border:0
+	}
+
+ul {list-style-type: none}
  
-body{font-family:sans-serif;background-color:#ded} 
-#i{padding: 33px 0;background: -webkit-gradient(linear, left top, left bottom, from(grey), to(#ded));background: -o-linear-gradient(grey, #ded);background: linear-gradient(grey, #ded); 
-text-align: center;
-}
+body{
+	font-family: sans-serif;
+	background-color:#ded
+	} 
+#i{
+	padding: 33px 0;
+	background: -webkit-gradient(linear, left top, left bottom, from(grey), to(#ded));
+	background: -o-linear-gradient(grey, #ded);
+	background: linear-gradient(grey, #ded); 
+	text-align: center;
+	}
 
 
-.ira{position: absolute;cursor: move; color: white;
+.ira{
+	position: absolute;
+	cursor: move; 
+	color: white;
 	display: -ms-grid;
-	display: grid; place-items:center; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
-	font-size:16px;width:25px; height: 20px;
-    z-index: 9;}
-.iba{margin:0 2px;cursor: move; color: white;
+	display: grid; 
+	place-items:center; 
+	-webkit-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none;
+	font-size:16px;
+	width:25px; 
+	height: 20px;
+    z-index: 9;
+	}
+.iba{
+	margin:0 2px;
+	cursor: move; 
+	color: white;
 	display: -ms-grid;
-	display: grid; place-items:center; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+	display: grid; 
+	place-items:center; 
+	-webkit-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none;
 	font-size:16px;
 	width:25px;
     }	
@@ -53,19 +87,27 @@ text-align: center;
 	}
 
 
-.a:before{content:'';display:block;position: absolute;width:5px; height: 20px;top:-27px;left:15px;background: blue;
-}
+.a:before{
+	content: '';
+	display:  block;
+	position: absolute;
+	width: 5px; 
+	height: 20px;
+	top: -27px;
+	left: 15px;
+	background: blue;
+	}
 
 
 
 .b:after{
-	content:'';
-	display:block;
+	content: '';
+	display: block;
 	position: absolute;
-	width:35px; 
+	width: 35px; 
 	height: 5px;
-	top:-12px;
-	left:2px;
+	top: -12px;
+	left: 2px;
 	background: blue;
 	}
 legend{
@@ -109,8 +151,8 @@ legend{
 	font-weight: 700;
 	}
 #m3{
-visibility:hidden;
-}
+	visibility:hidden;
+	}
 
 article{
 	margin: auto;
@@ -142,16 +184,19 @@ article{
 	z-index: 5;
 	}
 #fa{
-	width:100%;
+	width: 100%;
 	height: 444px;
-	 background: transparent;
-	 position: fixed; bottom:0;
+	background: transparent;
+	position: fixed; 
+	bottom: 0;
 	display: -webkit-box;
 	display: -ms-flexbox;
-	display: flex; -webkit-box-align: start;
-	 -ms-flex-align: start; align-items: flex-start;
-	 -ms-flex-wrap: wrap;
-	 flex-wrap: wrap;
+	display: flex; 
+	-webkit-box-align: start;
+	-ms-flex-align: start; 
+	align-items: flex-start;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 	z-index:6;
 	}
 
@@ -159,7 +204,7 @@ button{
 	margin: 1px;
 	padding: 8px 16px; 
 	background: #efd;
-	border:2px solid blue; 
+	border: 2px solid blue; 
 	border-radius: 5px;
 	font-size: 21px;
 	cursor:pointer;
@@ -169,8 +214,8 @@ button{
 	}
 button:hover{background: #fff;}
 p{
-	height:444px; 
-	visibility: hidden
+	height: 444px; 
+	visibility: hidden;
 	}
 nav{
 	position: fixed;
