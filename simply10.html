@@ -8,26 +8,36 @@
 
   <title>Замена-10</title>
   <style>
-*:not(hr), *::after, *::before {box-sizing: border-box;margin:0;padding:0;border:0}ul {list-style-type: none}
+/*https://autoprefixer.github.io/ru/
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+*:not(hr), *::after, *::before {-webkit-box-sizing: border-box;box-sizing: border-box;margin:0;padding:0;border:0}ul {list-style-type: none}
  
 body{font-family:sans-serif;background-color:#ded} 
-#i{padding: 33px 0;background: linear-gradient(grey, #ded); 
+#i{padding: 33px 0;background: -webkit-gradient(linear, left top, left bottom, from(grey), to(#ded));background: -o-linear-gradient(grey, #ded);background: linear-gradient(grey, #ded); 
 text-align: center;
 }
 
 
 .ira{position: absolute;cursor: move; color: white;
-	display: grid; place-items:center; user-select: none;
+	display: -ms-grid;
+	display: grid; place-items:center; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
 	font-size:16px;width:25px; height: 20px;
     z-index: 9;}
 .iba{margin:0 2px;cursor: move; color: white;
-	display: grid; place-items:center; user-select: none;
+	display: -ms-grid;
+	display: grid; place-items:center; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
 	font-size:16px;
 	width:25px;
     }	
 
 
 .km{margin:2px;
+	display: -ms-grid;
 	display: grid; place-items: center;
 	width:43px;  
 	border:4px solid blue;
@@ -35,7 +45,8 @@ text-align: center;
 	background: white;
 	font-family : monospace;
 	font-size:24px;
-	text-overflow: clip;
+	-o-text-overflow: clip;
+	   text-overflow: clip;
 	color:black;
 	letter-spacing:1px;
 	z-index:6;
@@ -47,67 +58,139 @@ text-align: center;
 
 
 
-.b:after{content:'';display:block;position: absolute;width:35px; height: 5px;top:-12px;left:2px;background: blue;}
-legend{font-family : monospace;
-font-size:24px;
-text-align: center;color: blue;
-}
+.b:after{
+	content:'';
+	display:block;
+	position: absolute;
+	width:35px; 
+	height: 5px;
+	top:-12px;
+	left:2px;
+	background: blue;
+	}
+legend{
+	font-family: monospace;
+	font-size: 24px;
+	text-align: center;
+	color: blue;
+	}
 
 
-#m1,#m2,#m3{margin: auto; color: white; text-align: left;
-border:5px solid white;
-font-family : monospace;
-width: fit-content;
-padding: 20px 4%;
-font-size:22px;
-letter-spacing: 8px;
-line-height: 37px;
-max-width:800px;
-}
+#m1,#m2,#m3{
+	margin: auto; 
+	color: white; 
+	text-align: left;
+	border: 5px solid white;
+	font-family : monospace;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	padding: 20px 4%;
+	font-size: 22px;
+	letter-spacing: 8px;
+	line-height: 37px;
+	max-width: 800px;
+	}
 #m1{
-position:absolute; top:0; left:0;
-border:5px solid #ffffff00;
-color:#00000080;
-background: white;
-}
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	border: 5px solid #ffffff00;
+	color: #00000080;
+	background: white;
+	}
 #m2{
-position:absolute; top:0; left:0;
-background: transparent;
-padding-top:5px;
-color: purple;
-font-weight:700;
-}
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	background: transparent;
+	padding-top: 5px;
+	color: purple;
+	font-weight: 700;
+	}
 #m3{
 visibility:hidden;
 }
 
-article{margin: auto;position: relative;width:fit-content;}
+article{
+	margin: auto;
+	position: relative;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	}
 
-#ty{padding-top:100px;
-display:flex;justify-content: center; align-items: flex-start;
-flex-wrap: wrap; visibility: hidden;
-position: fixed; bottom: 10px;
-width:100%;height:444px;background: fuchsia;
-z-index:5;
-}
-#fa{width:100%;height: 444px; background: transparent;
- position: fixed; bottom:0;
-display: flex; align-items: flex-start; flex-wrap: wrap;
-z-index:6;
-}
+#ty{
+	padding-top: 100px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center; 
+	-webkit-box-align: start; 
+	-ms-flex-align: start; 
+	align-items: flex-start;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap; 
+	visibility: hidden;
+	position: fixed; 
+	bottom: 10px;
+	width: 100%;
+	height: 444px;
+	background: fuchsia;
+	z-index: 5;
+	}
+#fa{
+	width:100%;
+	height: 444px;
+	 background: transparent;
+	 position: fixed; bottom:0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex; -webkit-box-align: start;
+	 -ms-flex-align: start; align-items: flex-start;
+	 -ms-flex-wrap: wrap;
+	 flex-wrap: wrap;
+	z-index:6;
+	}
 
-button{margin:1px;padding:8px 16px; background: #efd;
-border:2px solid blue; border-radius: 5px;
-font-size:21px;
-cursor:pointer;
-transition: all 1s
-}
+button{
+	margin: 1px;
+	padding: 8px 16px; 
+	background: #efd;
+	border:2px solid blue; 
+	border-radius: 5px;
+	font-size: 21px;
+	cursor:pointer;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s
+	}
 button:hover{background: #fff;}
-p{height:444px; visibility: hidden}
-nav{position:fixed;top:20px;left:0;
-display:flex; flex-direction:column;}
-#cop{width: calc(100% - 6px);height:222px;background:#ded;position:absolute; left:-9999px;}
-
+p{
+	height:444px; 
+	visibility: hidden
+	}
+nav{
+	position: fixed;
+	top: 20px;
+	left: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex; 
+	-webkit-box-orient: vertical; 
+	-webkit-box-direction: normal; 
+	-ms-flex-direction: column; 
+	flex-direction: column;
+	}
+#cop{
+	width: calc(100% - 6px);
+	height: 222px;
+	background: #ded;
+	position: absolute; 
+	left: -9999px;
+	}
   </style>  
 </head>
 <body>
