@@ -23,7 +23,13 @@
 # Используемое ПО
 движок собран в JavaScript
 <hr>
-[![codewars](https://www.codewars.com/users/username/badges/micro)](https://www.codewars.com/users/username) 
+
 <br>
 # Используемые материалы
 https://habr.com/ru/post/649363/
+ # Известные проблемы
+Программа тестируется. Явных багов не обнаружено.
+# Системные требования
+Программа работает под ОС Windows на персональном компьютере.
+# Используемое ПО
+движок собран в JavaScript
