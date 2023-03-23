@@ -24,5 +24,6 @@
 движок собран в JavaScript
 <hr>
 [![codewars](https://www.codewars.com/users/username/badges/micro)](https://www.codewars.com/users/username) 
+<br>
 # Используемые материалы
 https://habr.com/ru/post/649363/
