@@ -249,7 +249,8 @@ nav{
 			conny();// вывод деши
 		">reset</button>
 		<button onclick="
-			cop.value=m2.innerText;
+			//cop.value=m2.innerText;
+			cop.value=m2.innerText.replace(/(.{35})( )/g,'$1');
 			cop.select();
 			document.execCommand('copy');
 			window.getSelection()?.removeAllRanges();
@@ -257,7 +258,12 @@ nav{
 		<button onclick="
 			navigator.clipboard.readText()
 				.then(text => {
-				text=[...text].map(i=>i.toUpperCase()).join('');
+				//text=[...text].map(i=>i.toUpperCase()).join('');
+				text=[...text].map(i=>i.toUpperCase()
+					
+					)
+					.join('').replace(/(.{35})/g,'$1 ');
+				
 				cop.value=text;
 				main(cop.value);
 				btn1.onclick();
@@ -283,6 +289,7 @@ nav{
 
 <script>
 'use strict';
+var droba=false; // слова более 35 букв дробить на мелкие
 var ir,ib;
 let ws;// коорды размеры башен
       //  А  Б  В  Г  Д  Е  Ё  Ж  З  И  Й  К  Л  М  Н  О  П  Р 
