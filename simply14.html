@@ -178,8 +178,10 @@ article{
 	z-index: 5;
 }
 #platr,#plate{
-	p0adding-top: 1px;
 	padding: 1px 30px 0;
+	position: absolute;
+	top:0; 
+	left: 0;	
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -190,17 +192,8 @@ article{
 	-ms-flex-align: start; 
 	align-items: flex-start;
 	-ms-flex-wrap: wrap;
-	v0isibility: hidden;
-
-
-	width: 100%;
-
-	flex-wrap: wrap;
-	
-	position: absolute;
-	top:0; left: 0;
-	b0ackground: fuchsia;
-	
+	flex-wrap: wrap;	
+	width: 100%;	
 	}
 #platr{visibility:hidden}	
 #plate{visibility:hidden}
@@ -212,8 +205,6 @@ article{
 	position: fixed; 
 	bottom: 0;
 	display: none;
-	d0isplay: -webkit-box;
-	d0isplay: -ms-flexbox;
 	display: flex; 
 	-webkit-box-align: start;
 	-ms-flex-align: start; 
@@ -458,7 +449,7 @@ p=new Set([...ss].filter(x=>z[0]['af'].indexOf(x)>-1));
 const d=Array.from(p).join('');//горд
 const q=[...ss].filter(x=>z[0]['af'].indexOf(x)>-1)// частота
 	.reduce((a,x)=>{a[x]=~~a[x]+1;return a},{})
-const c=z[0]['af'].filter(i=>i in q).sort((a,b)=>q[b]-q[a]).map(i=>q[i]-1);//21,14,13
+let c=z[0]['af'].filter(i=>i in q).sort((a,b)=>q[b]-q[a]).map(i=>q[i]-1);//21,14,13
 const qa=z[0]['af'].filter(i=>i in q).sort((a,b)=>q[b]-q[a]).join('');//отеиc
 //s1=[...ss].map(x=>(qa.indexOf(x)>-1)?z[0]['ef'][qa.indexOf(x)]:x).join('');
 s1=[...ss].map(x=>(qa.indexOf(x)>-1)?ef[qa.indexOf(x)]:x).join('');
@@ -520,7 +511,7 @@ z[1]['af'].forEach((x,i)=>{dragElement(ir['en'][i])});
 //*****************************
 
 hu=document.querySelectorAll('.km');
-
+c=c.map(x=>(!x)?1:x);//избавление от нулей
 hi=c.map((x,i)=>`${43+c[i]*400/c[0]|0}px`);
 [...hu].forEach((x,i)=>{x.style.height=hi[i]});// высота небоскребов
 const sit=()=>{
