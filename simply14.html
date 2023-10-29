@@ -511,8 +511,10 @@ z[1]['af'].forEach((x,i)=>{dragElement(ir['en'][i])});
 //*****************************
 
 hu=document.querySelectorAll('.km');
-c=c.map(x=>(!x)?1:x);//избавление от нулей
-hi=c.map((x,i)=>`${43+c[i]*400/c[0]|0}px`);
+//c=c.map(x=>(!x)?1:x);//избавление от нулей
+let kit;
+c=c.map((x,i)=>kit=(!i)&&(!x));
+hi=(kit)?c.map((x,i)=>`${43+c[i]*400/c[0]|0}px`):c.map(x=>'223px');
 [...hu].forEach((x,i)=>{x.style.height=hi[i]});// высота небоскребов
 const sit=()=>{
 	ws=[...hu].map(x=>{return {// коорды посадочных мест
