@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="data:image/gif;base64,R0lGODlhEAAQAPcAAHVNY3dQZ31Vb4Zbc4xkd5t0gbWOlsekotK1r97FvubUzuvb1uzd2Ovc2Onb1ujX1XdMZnVPaoFYdItgeYxkdYlgbqB4gbKLiLyXkc+ypuPJvN7Hu97Eut7Butq+tdi8u3xPaYVdeIpieY1mhYpmfX5abINXbotXbXE1UHVAVaBnd618hraGi7OHiKt9f7qTmn9Pa2s9YG47WW43XnRCYWY4WWw9XcOntbCKmZl2hH5NZlosSGg2VIpgeptwi6N3jH9RZ5ZtgtSwtPba4Ne5wmg/V4dVZ/r///Xr5fTv5fXn7pVrfnhGY5dxiZJmgKJ6hdrKwuvk2vz28aB9hAoAAJdud/Dk4OHUy8qtqtfDuf3w7d3Ix2IlS3xSdIpbeK2Kj+bYzuLZ0v/++sepq5pzfd7Gw+ve2suuqpx4bfTu5/ry6ZxtdtO+wp51isChoePSyeXa0//+9rSPlvXu45FmWufY1OrTzbCJhf348Pr16X5WUP/98ObR08Gjo+POx+XRzvHb2HU6TloXLuvY2ZFfXsSkrIlSUal8evjo4PDf2m4yOtvAveXV1Lycnt/MwOPOyM22s1slQEcDIPDl3e3i47+jlt3HwOPTzLaamF4mMLqWleXP0qmCismyqNu/ucSlqmoxU1AJJPnu6drOw93HzejZ0efY08KjppFgd3M0VptpgMKerZhjeJdreaV8haWFjnZIYmMkPufZ1szBrMmwq9W/ssKhnKl5hIxTc3Y5XIdLapVeeJdad4xUbotQaYhbc4NRbm4sT6F8jZt5fJ5seaRzc45VXY5QaIZNbn1DYIhHaYxOcJxadqNZe51VcZhZbZJSanIuSn1IY4hMao5JbotMZ4pJZpNQdYhMc3k3YIM+aYxJbaJdea1igqdjfJtbc5hVc3o2V2opS3YzU4E3YIREZ4hOaIlPbIRKaHs2WYY8YY1HbqttgMOIlMWSmbeBibN3g6tre6Rec6deeZtMbplIb6JPdKVSdqBNcpVDaY9EaI9KbQAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQEewABACwAAAAAEAAQAAAI/wABQAABA8iTL276NOLEihczbuwCRAgRIwgUMG/8OOrUqlezbu0ESBAhQ0iUMHD+PPLkypczb+4GTBgxY4gUMXEAQfr06tezb+8IUCBBg8iUMXICRQIFCxg0cPAKVChRowgVMm4ESQoVK1i0cPEMWDBhw0iVI3MGHRElS5g0cfIOXDhx44iVMnQITRo1a9i0cfMQYECBA8kVM3UKUSJFixg1cvQSZEiRIwmWM3YMVSpVq1i1cvUUaFCh40gWNHcOWTJly5g1c/YWbFixQ4mWNHgQXTp169i1c/cYcGDBY8kWNXkSYUKFCxk2dPgadGjRgwmXNXoUZUqVK1m2dPkceCRw4aNJFzZ7FmlSpUuZNnX6Hnx48cOJlzZ8GG1atWvZtnX7BAQAOw==">
+
+
+  <title>Замена-14</title>
+  <style>
+/*
+* Prefixed by https://autoprefixer.github.io/ru/
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+*:not(hr), *::after, *::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+	border:0
+	}
+
+ul {list-style-type: none}
+ 
+body{
+	font-family: sans-serif;
+	background-color:#ded
+	} 
+#i{
+	padding: 33px 0;
+	background: -webkit-gradient(linear, left top, left bottom, from(grey), to(#ded));
+	background: -o-linear-gradient(grey, #ded);
+	background: linear-gradient(grey, #ded); 
+	text-align: center;
+	}
+	
+.ivan{
+	display: -ms-grid;
+	display: grid; 
+	place-items: center; 	
+	width: 25px;	
+	font-size: 16px;
+}
+
+.ira1{
+	position: absolute;
+	cursor: move; 
+	color: white; 
+	-webkit-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none;
+	height: 20px;
+    z-index: 9;
+	background: #025202;/*green;*/
+	}
+.ira2{
+	position: absolute;
+	cursor: move; 
+	color: white; 
+	-webkit-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none;
+	height: 20px;
+    z-index: 10;
+	background: red;/*green;*/
+	}	
+	
+.iba1,.iba2{
+	margin: 0 2px 30px;
+	background: #00000023;
+    }
+	
+
+
+.km{margin:2px;
+	display: -ms-grid;
+	display: grid; place-items: center;
+	width:43px;  
+	border:4px solid blue;
+	position: fixed; bottom: 0px;
+	background: white;
+	font-family : monospace;
+	font-size:24px;
+	-o-text-overflow: clip;
+	   text-overflow: clip;
+	color:black;
+	letter-spacing:1px;
+	z-index:6;
+	}
+
+
+.a:before{
+	content: '';
+	display:  block;
+	position: absolute;
+	width: 5px; 
+	height: 20px;
+	top: -27px;
+	left: 15px;
+	background: blue;
+	}
+
+
+
+.b:after{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 35px; 
+	height: 5px;
+	top: -12px;
+	left: 2px;
+	background: blue;
+	}
+legend{
+	font-family: monospace;
+	font-size: 24px;
+	text-align: center;
+	color: blue;
+	}
+
+
+#m1,#m2,#m3{
+	margin: auto; 
+	color: white; 
+	text-align: left;
+	border: 5px solid white;
+	font-family : monospace;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	padding: 20px 4%;
+	font-size: 22px;
+	letter-spacing: 8px;
+	line-height: 37px;
+	max-width: 800px;
+	}
+#m1{
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	border: 5px solid #ffffff00;
+	color: #00000080;
+	background: white;
+	}
+#m2{
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	background: transparent;
+	padding-top: 5px;
+	color: purple;
+	font-weight: 700;
+	}
+#m3{
+	visibility:hidden;
+	}
+
+article{
+	margin: auto;
+	position: relative;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	}
+
+#deep {
+	position: fixed; 
+	bottom: 10px;	
+	width: 100%;
+	height: 444px;	
+	z-index: 5;
+}
+#platr,#plate{
+	p0adding-top: 1px;
+	padding: 1px 30px 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center; 
+	-webkit-box-align: start; 
+	-ms-flex-align: start; 
+	align-items: flex-start;
+	-ms-flex-wrap: wrap;
+	v0isibility: hidden;
+
+
+	width: 100%;
+
+	flex-wrap: wrap;
+	
+	position: absolute;
+	top:0; left: 0;
+	b0ackground: fuchsia;
+	
+	}
+#platr{visibility:hidden}	
+#plate{visibility:hidden}
+
+#fa{
+	width: 100%;
+	height: 444px;
+	background: transparent;
+	position: fixed; 
+	bottom: 0;
+	display: none;
+	d0isplay: -webkit-box;
+	d0isplay: -ms-flexbox;
+	display: flex; 
+	-webkit-box-align: start;
+	-ms-flex-align: start; 
+	align-items: flex-start;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	z-index:6;
+	}
+
+button{
+	margin: 1px;
+	padding: 8px 16px; 
+	background: #efd;
+	border: 2px solid blue; 
+	border-radius: 5px;
+	font-size: 21px;
+	cursor:pointer;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s
+	}
+button:hover{background: #fff;}
+p{
+	height: 444px; 
+	visibility: hidden;
+	}
+nav{
+	position: fixed;
+	top: 20px;
+	left: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex; 
+	-webkit-box-orient: vertical; 
+	-webkit-box-direction: normal; 
+	-ms-flex-direction: column; 
+	flex-direction: column;
+	}
+#cop{
+	width: calc(100% - 6px);
+	height: 222px;
+	background: #ded;
+	position: absolute; 
+	left: -9999px;
+	}
+.graf{
+	position: fixed;
+	top: 1px; right: 1px;
+	display: grid;
+	place-items: center;
+	width: 44px; aspect-ratio: 1;
+	background: #ded;
+	border-radius: 20px;
+	font-size: 30px;
+	cursor: pointer;
+	z-index: 50;
+}
+.graf:hover{transform: scale(1.1)}
+
+
+
+  </style>  
+</head>
+<body>
+	<nav>
+		<button id="btn1" onclick="
+			ir['ru'].forEach((x,i)=>{
+				x.style.top=ib['ru'][i].offsetTop+'px';
+				x.style.left=ib['ru'][i].offsetLeft+'px';});	
+			ir['en'].forEach((x,i)=>{
+				x.style.top=ib['en'][i].offsetTop+'px';
+				x.style.left=ib['en'][i].offsetLeft+'px';});								
+			conny(nom);// вывод деши
+		">reset</button>
+		<button onclick="
+			cop.value=m2.innerText.replace(/(.{35})( )/g,'$1');
+			cop.select();
+			document.execCommand('copy');
+			window.getSelection()?.removeAllRanges();
+		">copy</button>
+		<button onclick="
+			navigator.clipboard.readText()
+				.then(text => {
+				//text=[...text].map(i=>i.toUpperCase()).join('');
+				text=[...text].map(i=>i.toUpperCase()
+					
+					)
+					.join('').replace(/(.{35})/g,'$1 ');
+				
+				cop.value=text;
+				main(cop.value);
+				btn1.onclick();
+				})
+				.catch(err => {
+				console.log('Oblomingo flyed pass', err);
+				});
+				
+		">paste</button>		
+	</nav>
+	<textarea id="cop">для копирования</textarea>
+
+	<div id=i>
+		<article>
+			<div id="m3"></div>
+			<div id="m1"></div>
+			<div id="m2"></div>
+		</article>
+		<div id="deep">
+			<div id="platr" style="background: fuchsia;	"></div>
+			<div id="plate"	style="background: purple;	"></div>		
+		</div>
+	</div>
+	<form id="fa"></form>
+	<p></p>	
+	
+<div class="graf" onclick="//z-index: 5;z-index: 6;
+	dataru=!dataru;
+	nom=['en','ru'][+dataru];// имя алфавита
+	this.innerText=nom;
+	ir[nom].forEach(x=>{x.style.visibility='visible'});
+	ir[['en','ru'][+!dataru]].forEach(x=>{x.style.visibility='hidden'});
+
+	conny(nom);
+">ru</div>	
+
+
+<script>
+'use strict';
+var dataru=1;
+var droba=false; // слова более 35 букв дробить на мелкие
+var ir,ib;
+let ws;// коорды размеры башен
+let ef='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+let nom='ru';
+
+const z=
+[{
+      //  А  Б  В  Г  Д  Е  Ё  Ж  З  И  Й  К  Л  М  Н  О  П  Р 
+	  fq:[21,7 ,14,4 ,9 ,34,0 ,4 ,12,21,11,11,12,16,35,38,8 ,12,
+		//  С  Т  У  Ф  Х  Ц  Ч  Ш  Щ  Ъ  Ы  Ь  Э  Ю  Я  _
+			18,19,8 ,2 ,5 ,1 ,4 ,3 ,2 ,0 ,13,3 ,0 ,0 ,11,45],
+ af:[...'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'],
+ qf:[...'ОНЕАИТСМВЫЛЗРЙКЯДПУБХГЖЧЬШФЩЦЮЭЪЁ'],
+},
+
+{
+	// A   B   C   D   E   F   G   H   I   J   K   L   M
+  fq:[ 82, 15, 28, 43,127, 22, 20, 61, 70,  2,  8, 40, 24, 
+
+	//  N   O   P   Q   R   S   T   U   V   W   X   Y   Z
+		68, 75, 19,  1, 60, 63, 91, 28, 10, 24,  2, 20,  1],	
+ af:[...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'],
+ qf:[...'ETAOINSHRDLCUMWFGYPBVKJXQZ'],
+},
+
+];
+
+
+
+
+let f;
+let o; // обьект
+let p;// множество для алфавита шифротекста
+let hu,hi;
+let t=[];// abcd
+let s1;
+
+platr.innerHTML=z[0]['qf'].map((x,i)=>
+	{return '<div class="ivan iba1" style="height:'+
+	(z[0]['fq'][z[0]['af'].indexOf(x)]+21)+
+	'px;">'+x+'</div>'}).join('');
+
+plate.innerHTML=z[1]['qf'].map((x,i)=>
+	{return '<div class="ivan iba2" style="height:'+
+	(z[1]['fq'][z[1]['af'].indexOf(x)]/3+21)+
+	'px;">'+x+'</div>'}).join('');
+
+
+
+function dragElement(ass) {//Make the DIV element draggagle:
+	var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+	ass.onmousedown = dragMouseDown;
+
+	function dragMouseDown(e) {
+		e = e || window.event;
+		// get the mouse cursor position at startup:
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		document.onmouseup = closeDragElement;
+		// call a function whenever the cursor moves:
+		document.onmousemove = elementDrag;
+		}
+
+	function elementDrag(e) {
+		e = e || window.event;
+		// calculate the new cursor position:
+		pos1 = pos3 - e.clientX;
+		pos2 = pos4 - e.clientY;
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		// set the element's new position:
+		ass.style.top = (ass.offsetTop - pos2) + "px";
+		ass.style.left = (ass.offsetLeft - pos1) + "px";
+		}
+
+	function closeDragElement() {
+		/* stop moving when mouse button is released:*/
+		document.onmouseup = null;
+		document.onmousemove = null;
+		conny(nom);// вывод деши
+		}
+}
+
+
+
+const ss='И ФЭПЭ ШИЩРЮСЩЬД ЦПСЮЖЮ. ПЦСДЧЩЭ, ЖБЫРСХЭ, ЖЮЖ АЭСГХЭ ЮОБЦЬГЮГХ. Щ ЬЮБЮК, ЖЦГЦБХК ЖЮЛЮСЬН Ь ЛЭТСЩ ЦМЭФД ЦПХЖФЦИЭФФХТ, ВСХС ФЮИЬГБЭМЫ ЦПСЮЖЮТ, ПЫШГЦ ВЦШФНГХК И ФЭПЦ ЖЦБЮПСД. Ю ШИЦБ ФЮВЦТЩФЮС ВЦИЭБУФЦЬГД ВСЮФЭГХ, ЫИЩШЭФФЫЯ Ь ЖЦЬТЩМЭЬЖЦК ИХЬЦГХ. ЦЬГБЦИЖЩ ВХСДФЦК ГБЮИХ, ВЭБЭЬХВЮФФЦК ЬЭШХТЩ ЧЮБЩЖЮТЩ ЦШЫИЮФМЩЖЦИ, ПХСЩ ВЦУЦАЩ ФЮ ЛЭСЭФХК ЮБУЩВЭСЮР, Ю ШЦАШЭИЮН ИЦШЮ И ПЦМЖЭ Ы ЬЮБЮН, ЬСЦИФЦ ЖБЫРСЦЭ ЦЛЭБЦ И ЦГИЭЬФХУ ПЭБЭРЮУ, ЬИЭГЩСЦЬД РЦСЫПЦК ЬЩФЭИЦК. ТЮСДМЩЖ СЯПЩС ИЬЭТЫ ФЮ ЬИЭГЭ ШЮИЮГД ЩТЭФЮ Щ ФЮЛИЮФЩН. ЦФЩ ИЬЭРШЮ ВБЩШЫТХИЮСЩЬД ЬБЮЛЫ. ЛЭБЖЮСДЕЭ ИЦШХ И ПЦМЖЭ ЦФ ФЮЛИЮС ЦЛЭБЦТ ЬЩФЭРЦ ЬИЭГЮ, Ю ВНГФЮ ГБЮИХ ЮБУЩВЭСЮРЦТ ФЭЩЛИЭШЮФФХУ СЭЬЦИ.';
+main(ss);
+
+
+function main(ss){
+fa.innerHTML=[
+		'<div class="ru">'+
+		z[0]['qf'].map((x,i)=>
+			{return '<div class="ivan ira1" style="height:'+
+			(z[0]['fq'][z[0]['af'].indexOf(x)]+21)+
+			'px;'+
+			'">'+x+'</div>'}).join('')+'</div>',
+		'<div class="en">'+	
+		z[1]['qf'].map((x,i)=>
+			{return '<div class="ivan ira2" style="height:'+
+			(z[1]['fq'][z[1]['af'].indexOf(x)]/3+21)+
+			'px;visibility:hidden'+
+			'">'+x+'</div>'}).join('')+'</div>',		
+	].join('');
+/*
+fa.innerHTML=z[0]['qf'].map((x,i)=>
+	{return '<div class="ivan ira1" style="height:'+
+	(z[0]['fq'][z[0]['af'].indexOf(x)]+21)+
+	'px;">'+x+'</div>'}).join('');
+*/
+p=new Set([...ss].filter(x=>z[0]['af'].indexOf(x)>-1));
+const d=Array.from(p).join('');//горд
+const q=[...ss].filter(x=>z[0]['af'].indexOf(x)>-1)// частота
+	.reduce((a,x)=>{a[x]=~~a[x]+1;return a},{})
+const c=z[0]['af'].filter(i=>i in q).sort((a,b)=>q[b]-q[a]).map(i=>q[i]-1);//21,14,13
+const qa=z[0]['af'].filter(i=>i in q).sort((a,b)=>q[b]-q[a]).join('');//отеиc
+//s1=[...ss].map(x=>(qa.indexOf(x)>-1)?z[0]['ef'][qa.indexOf(x)]:x).join('');
+s1=[...ss].map(x=>(qa.indexOf(x)>-1)?ef[qa.indexOf(x)]:x).join('');
+//s1=[...ss].map(x=>(qa.indexOf(x)>-1)?ef[qa.indexOf(x)]:x).join('');
+//********************************************
+
+const booa=[...ef].map(x=>{/// однобукыенные слова
+	let e=new RegExp('\\b'+x+'\\b','g');
+	return e.test(s1);
+});
+
+const boob=[...ef].map(x=>{/// удвойенные буквы
+	let e=new RegExp(x+x);
+	return e.test(s1);
+});
+
+let sot=new Set();// ТИПА ключ шифрования замены
+let key=[];
+[...ss].forEach(x=>{
+	if((z[0]['af'].indexOf(x)>-1)&&!sot.has(x))key.push(x); 
+	sot.add(x)
+});
+key=key.concat(z[0]['af'].filter(x=>!sot.has(x)));
+
+
+//***************************************
+t=[];
+//for (let i=0; i<d.length; i++){t.push(z[0]['ef'][i])}
+for (let i=0; i<d.length; i++){t.push(ef[i])}
+t=t.join('');
+	
+let iq4=[...t].map((x,i)=>//аддитивное обьединение двух колод - небоскребы и буквы
+'<fieldset class="km'+
+`${(booa[i])?' a':''}`+ //вертикальный штрих
+`${(boob[i])?' b':''}`+ // горизонтальн штрих
+	'" style="left:'+(i*46)+'px">'+x+'</fieldset>').join('');	
+fa.innerHTML+=iq4;
+//*************************
+ir={
+	ru:[...document.querySelectorAll('.ira1')],
+	en:[...document.querySelectorAll('.ira2')],
+};// подвижные элементы
+ib={
+	ru:[...document.querySelectorAll('.iba1')],
+	en:[...document.querySelectorAll('.iba2')],
+};// неподвижные элементы         
+ir['ru'].forEach((x,i)=>{
+	x.style.left = ib['ru'][i].offsetLeft+'px';
+	x.style.top = ib['ru'][i].offsetTop+'px';
+	});
+ir['en'].forEach((x,i)=>{
+	x.style.left = ib['en'][i].offsetLeft+'px';
+	x.style.top = ib['en'][i].offsetTop+'px';
+	});	
+	
+
+z[0]['af'].forEach((x,i)=>{dragElement(ir['ru'][i])});
+z[1]['af'].forEach((x,i)=>{dragElement(ir['en'][i])});
+//*****************************
+
+hu=document.querySelectorAll('.km');
+
+hi=c.map((x,i)=>`${43+c[i]*400/c[0]|0}px`);
+[...hu].forEach((x,i)=>{x.style.height=hi[i]});// высота небоскребов
+const sit=()=>{
+	ws=[...hu].map(x=>{return {// коорды посадочных мест
+		x1:x.offsetLeft,
+		x2:x.offsetLeft+x.offsetWidth,
+		y1:x.offsetTop,
+		y2:x.offsetTop+x.offsetHeight
+	}});
+	ir['ru'].forEach((x,i)=>{
+		x.style.left = ib['ru'][i].offsetLeft+'px';
+		x.style.top = ib['ru'][i].offsetTop+'px';
+		});
+	ir['en'].forEach((x,i)=>{
+		x.style.left = ib['en'][i].offsetLeft+'px';
+		x.style.top = ib['en'][i].offsetTop+'px';
+		});	
+}
+
+sit();// пересчет коорд посадок
+conny('ru');// вывод деши
+
+window.onresize=()=>{
+	sit();
+	conny(nom);// вывод деши
+}
+//*******************
+}// end main
+
+
+
+function conny(pok){// вывод деши
+	o=[...t].reduce((a,x)=>{a[x]='.'; return a},{});
+	[...ir[pok]].forEach((x,i)=>{//'ru' 'en'
+		let v=x.offsetLeft+ 12;
+		let w=x.getBoundingClientRect().top+20;
+		let b=x.innerText;
+		for(let j=0; j<t.length;j++){//в какую башню попал
+			f=w>ws[j].y1&&w<ws[j].y2;
+			if(f&&(v>ws[j].x1)&&(v<ws[j].x2)){o[t[j]]=b}	
+		}
+	});
+	m1.innerHTML=[...s1].map(x=>x).join('');//DAS
+	m2.innerHTML=[...s1].map(x=>(x in o)?o[x]:x).join('');
+	m3.innerHTML=m2.innerHTML;
+}
+</script>   
+</body>
+</html>
